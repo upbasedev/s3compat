@@ -1,13 +1,12 @@
 [package]
-name = "aws-region"
-version = "0.23.2"
-authors = ["Drazen Urch"]
-description = "Tiny Rust library for working with Amazon AWS regions, supports `s3` crate"
-repository = "https://github.com/durch/rust-s3"
+name = "s3compat-region"
+version = "0.1.0"
+authors = ["Bevan Hunt <bevan@bevanhunt.com>"]
+description = "Tiny Rust library for working with Amazon AWS regions, supports `s3compat` crate"
+repository = "https://github.com/upbasedev/s3compat"
 readme = "README.md"
 keywords = ["Amazon", "AWS", "S3", "Wasabi", "Minio"]
 license = "MIT"
-documentation = "https://durch.github.io/rust-s3/"
 edition = "2018"
 
 [lib]

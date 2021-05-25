@@ -86,6 +86,8 @@ pub enum Region {
     WaUsWest1,
     /// Wasabi eu-central-1
     WaEuCentral1,
+    /// Vultr ewr1
+    Vultr,
     /// Custom region
     Custom { region: String, endpoint: String },
 }
@@ -123,6 +125,7 @@ impl fmt::Display for Region {
             WaUsEast2 => write!(f, "us-east-2"),
             WaUsWest1 => write!(f, "us-west-1"),
             WaEuCentral1 => write!(f, "eu-central-1"),
+            Vultr => write!(f, "ewr1"),
             Custom { ref region, .. } => write!(f, "{}", region.to_string()),
         }
     }
@@ -164,6 +167,7 @@ impl FromStr for Region {
             "wa-us-east-2" => Ok(WaUsEast2),
             "wa-us-west-1" => Ok(WaUsWest1),
             "wa-eu-central-1" => Ok(WaEuCentral1),
+            "vultr" => Ok(Vultr),
             x => Ok(Custom {
                 region: x.to_string(),
                 endpoint: x.to_string(),
@@ -207,6 +211,7 @@ impl Region {
             WaUsEast2 => String::from("s3.us-east-2.wasabisys.com"),
             WaUsWest1 => String::from("s3.us-west-1.wasabisys.com"),
             WaEuCentral1 => String::from("s3.eu-central-1.wasabisys.com"),
+            Vultr => String::from("ewr1.vultrobjects.com"),
             Custom { ref endpoint, .. } => endpoint.to_string(),
         }
     }

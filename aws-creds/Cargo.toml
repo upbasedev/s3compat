@@ -1,13 +1,12 @@
 [package]
-name = "aws-creds"
-version = "0.26.0"
-authors = ["Drazen Urch"]
-description = "Tiny Rust library for working with Amazon IAM credential,s, supports `s3` crate"
-repository = "https://github.com/durch/rust-s3"
+name = "s3compat-creds"
+version = "0.1.0"
+authors = ["Bevan Hunt <bevan@bevanhunt.com>"]
+description = "Tiny Rust library for working with Amazon IAM credential,s, supports `s3compat` crate"
+repository = "https://github.com/upbasedev/s3compat"
 readme = "README.md"
 keywords = ["AWS", "S3", "Wasabi", "Minio", "Yandex"]
 license = "MIT"
-documentation = "https://durch.github.io/rust-s3/"
 edition = "2018"
 
 [lib]

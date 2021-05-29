@@ -5,7 +5,7 @@ authors = ["Bevan Hunt <bevan@bevanhunt.com>"]
 description = "S3 compatible object storage APIs"
 repository = "https://github.com/upbasedev/s3compat"
 readme = "README.md"
-keywords = ["S3", "Wasabi", "Vultr", "Cloud Storage", "API"]
+keywords = ["S3", "Wasabi", "Vultr", "Storage", "API"]
 license = "MIT"
 edition = "2018"
 

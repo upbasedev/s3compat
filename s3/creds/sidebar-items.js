@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["AssumeRoleWithWebIdentityResponse",""],["AssumeRoleWithWebIdentityResult",""],["AssumedRoleUser",""],["Credentials",""],["ResponseMetadata",""],["StsResponseCredentials",""]]});

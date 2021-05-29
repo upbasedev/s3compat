@@ -141,7 +141,7 @@ mod tests {
     use crate::request_trait::Request;
     use crate::surf_request::SurfRequest;
     use anyhow::Result;
-    use awscreds::Credentials;
+    use crate::creds::Credentials;
 
     // Fake keys - otherwise using Credentials::default will use actual user
     // credentials if they exist.

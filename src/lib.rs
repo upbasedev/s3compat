@@ -4,25 +4,21 @@
 #[macro_use]
 extern crate serde_derive;
 
-pub use awscreds as creds;
-pub use awsregion as region;
+pub mod creds;
+pub mod region;
 
 pub use bucket::Bucket;
 pub use bucket::Tag;
 pub use bucket_ops::BucketConfiguration;
 pub use region::Region;
+pub use creds::Credentials;
 
-#[cfg(feature = "sync")]
-pub mod blocking;
 pub mod bucket;
 pub mod bucket_ops;
 pub mod command;
 pub mod deserializer;
-#[cfg(feature = "with-tokio")]
-pub mod request;
 pub mod serde_types;
 pub mod signing;
-#[cfg(feature = "with-async-std")]
 pub mod surf_request;
 
 pub mod request_trait;

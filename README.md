@@ -1,7 +1,10 @@
-## S3Compat - S3 Compat API
+## S3Compat - S3 Compatible API
 
 [![crates.io](https://meritbadge.herokuapp.com/s3compat)](https://crates.io/crates/s3compat)
 
-Rust library for working with Amazon S3 or arbitrary S3 compatible APIs, fully compatible with **async/await** and `futures ^0.3`
+### Purpose
 
-More documentation is upcoming.
+The purpose of this library is to be an `async-std` wrapper for S3 compatible services.
+
+More documentation is upcoming...
+

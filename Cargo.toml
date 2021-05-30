@@ -1,6 +1,6 @@
 [package]
 name = "s3compat"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["Bevan Hunt <bevan@bevanhunt.com>"]
 description = "S3 compatible object storage APIs"
 repository = "https://github.com/upbasedev/s3compat"

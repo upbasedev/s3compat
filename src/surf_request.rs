@@ -68,9 +68,7 @@ impl<'a> Request for SurfRequest<'a> {
         match request.send().await {
             Ok(response) => { return Ok(response); }
             Err(e) => {
-                let x = e.into_inner();
-                println!("{}", x);
-                return Err(anyhow!("test"));
+                return Err(anyhow!("Request failed with code {}", e.status()));
             }
         }
     }

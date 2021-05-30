@@ -65,13 +65,14 @@ impl<'a> Request for SurfRequest<'a> {
             );
         }
 
-        let response = request.send().await.unwrap();
+        println!("{:?}", request);
 
-        if cfg!(feature = "fail-on-err") && !response.status().is_success() {
-            return Err(anyhow!("Request failed with code {}", response.status()));
+        match request.send().await {
+            Ok(response) => { return Ok(response); }
+            Err(e) => {
+                return Err(anyhow!("Request failed with code {}", e.status()));
+            }
         }
-
-        Ok(response)
     }
 
     async fn response_data(&self, etag: bool) -> Result<(Vec<u8>, u16)> {

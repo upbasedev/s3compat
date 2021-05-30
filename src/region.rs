@@ -145,6 +145,7 @@ impl FromStr for Region {
             "wa-us-east-2" => Ok(WaUsEast2),
             "wa-us-west-1" => Ok(WaUsWest1),
             "wa-eu-central-1" => Ok(WaEuCentral1),
+            "ewr1" => Ok(Vultr),
             "vultr" => Ok(Vultr),
             x => Ok(Custom {
                 region: x.to_string(),

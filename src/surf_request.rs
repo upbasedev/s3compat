@@ -70,6 +70,7 @@ impl<'a> Request for SurfRequest<'a> {
         match request.send().await {
             Ok(response) => { return Ok(response); }
             Err(e) => {
+                println!("{}", e.status());
                 return Err(anyhow!("Request failed with code {}", e.status()));
             }
         }

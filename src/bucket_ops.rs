@@ -107,7 +107,7 @@ impl BucketConfiguration {
 
     pub fn location_constraint_payload(&self) -> Option<String> {
         if let Some(ref location_constraint) = self.location_constraint {
-            if location_constraint == &Region::UsEast1 {
+            if location_constraint == &Region::UsEast1 || location_constraint == &Region::Vultr {
                 return None;
             }
             Some(format!(
